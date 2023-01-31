@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <form>
+            <div id="nascimento">
+                <label for="nasc">Ano de nascimento: </label>
+                <input type="number" name="nasc" id="nasc" min="0"  placeholder="ex: 2008">
+            </div>
+            <div id="sexo">
+                Sexo:
+                <label for="masculino">
+                    <input class="btn-sexo" type="radio" name="sexo" id="masculino" checked>
+                    Masculino
+                </label>
+                <label for="feminino">
+                    <input class="btn-sexo" type="radio" name="sexo" id="feminino">
+                    Feminino
+                </label>
+            </div>
+            <div id="btn">
+                <input type="button" value="Verificar" onclick="verificar()">
+            </div>
+        </form>
+        <div id="res">
+            Preencha os dados acima para ver o resultado!
+        </div>
+    </section>
+    <footer>
+        <p>&copy; JenaCarry</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
