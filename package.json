@@ -1,0 +1,27 @@
+{
+  "name": "curso-js",
+  "version": "1.0.0",
+  "description": "Aprendendo JavaScript com o canal do Curso em Vídeo",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JenaCarry/curso-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JenaCarry/curso-js/issues"
+  },
+  "homepage": "https://github.com/JenaCarry/curso-js#readme",
+  "devDependencies": {
+    "eslint": "^8.33.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "prettier": "^2.8.3"
+  }
+}
