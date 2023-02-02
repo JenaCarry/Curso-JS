@@ -24,7 +24,7 @@ section {
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
 }
 
-form div {
+div {
     padding-bottom: 1em;
 }
 
@@ -32,14 +32,14 @@ form div {
     text-align: center;
 }
 
-form #dados input,
-form #dados button {
+#dados input,
+#dados button {
     font: inherit;
     width: 100%;
     border-radius: .2em;
 }
 
-section form #dados label {
+section #dados label {
     display: block;
     padding-bottom: .3em;
 }

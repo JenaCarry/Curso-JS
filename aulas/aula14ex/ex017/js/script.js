@@ -1,18 +1,21 @@
-const gerar = document.querySelector('#btn');
-gerar.addEventListener('click', clicar);
+document.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        console.log('Apertou o Enter');
+        const btn = document.querySelector('#btn');
+        btn.click();
+    }
+});
 
-let num = document.querySelector('#num');
-
-function clicar() {
+function gerar() {
+    let num = document.querySelector('#num');
     let tab = document.querySelector('#tab');
-    let numero = num.value;
-
     let tabuada = '';
-    if (numero == '') {
+    if (num.value.length == 0) {
         alert('[ERRO] Preencha o campo para ver a tabuada!');
     } else {
-        for (var c = 1; c <= 10; c++) {
-            tabuada += `<p>${numero} x ${c} = ${numero * c}<br></p>`;
+        n = Number(num.value);
+        for (let c = 1; c <= 10; c += 1) {
+            tabuada += `<p>${n} x ${c} = ${n * c}<br></p>`;
         }
         tab.style.padding = '.3em';
         tab.style.fontWeight = 'bold';
