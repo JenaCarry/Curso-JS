@@ -1,8 +1,10 @@
 let valores = [];
 function adicionar() {
+    let res = document.querySelector('#res');
+    res.innerHTML = '';
     let numero = document.querySelector('#num');
     let array = document.querySelector('#array');
-    num = Number(numero.value);
+    let num = Number(numero.value);
     let valor = valores.indexOf(num);
     if (num < 1 || num > 100 || valor > -1) {
         alert('Valor inválido ou já encontrado na lista!');
@@ -13,8 +15,6 @@ function adicionar() {
         item.text = `Valor ${num} foi adicionado`;
         array.appendChild(item);
     }
-    console.log(valores);
-    console.log(valor);
 }
 
 function finalizar() {
@@ -44,11 +44,9 @@ function finalizar() {
         sum += valor;
     }
     */
-    let sum = valores.reduce(function (sum, i) {
-        return sum + i;
-    });
-    res.innerHTML += `<p>Somando todos os valores, temos ${sum}</p>`;
+    let somar = valores.reduce((sum, i) => sum + i);
+    res.innerHTML += `<p>Somando todos os valores, temos ${somar}</p>`;
     res.innerHTML += `<p>A média dos valores digitados é ${
-        sum / valores.length
+        somar / valores.length
     }</p>`;
 }

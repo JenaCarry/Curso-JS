@@ -90,6 +90,10 @@ select::-webkit-scrollbar {
     appearance: none;
 }
 
+p {
+    line-height: 2em;
+}
+
 footer {
     color: white;
     text-align: center;
