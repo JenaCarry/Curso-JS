@@ -8,10 +8,9 @@ function fatorial(num) {
 console.log(fatorial(5));
 
 const fatorial2 = (num) => {
-    if (num == 1) {
+    if (num === 1) {
         return 1;
-    } else {
-        return num * fatorial2(num - 1);
     }
+    return num * fatorial2(num - 1);
 };
 console.log(fatorial2(5));

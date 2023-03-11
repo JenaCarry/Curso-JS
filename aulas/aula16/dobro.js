@@ -1,5 +1,6 @@
 let v = (x) => {
-    return x * 2;
+    v = x * 2;
+    return v;
 };
 
 console.log(v(5));
