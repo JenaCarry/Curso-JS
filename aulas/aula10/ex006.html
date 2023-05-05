@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,28 +18,29 @@
         }
     </style>
 </head>
+
 <body>
     <!-- <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> -->
     <div id="area">
         Interaja...
     </div>
-    <script> 
-        var a = document.getElementById('area')
-        a.addEventListener('click', clicar)
-        a.addEventListener('mouseenter', entrar)
-        a.addEventListener('mouseout', sair)
-        function clicar() {
-            a.innerText = 'Clicou!'
-            a.style.background = 'blue' 
-        }
-        function entrar() {
-            a.innerText = 'Entrou!'
-            a.style.background = 'green'
-        }
-        function sair() {
-            a.innerText = 'Saiu!'
-            a.style.background = 'red'
-        }
+    <script>
+        const area = document.getElementById('area')
+        area.addEventListener('click', () => {
+            area.innerText = 'clicou!'
+            area.style.background = 'blue'
+        })
+
+        area.addEventListener('mouseenter', () => {
+            area.innerText = 'Entrou!'
+            area.style.background = 'green'
+        })
+
+        area.addEventListener('mouseout', () => {
+            area.innerText = 'Saiu!'
+            area.style.background = 'red'
+        })
     </script>
 </body>
+
 </html>

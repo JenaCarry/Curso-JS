@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nacionalidade</title>
 </head>
+
 <body>
     <h1>Analisando o País</h1>
     Em que país você nasceu: <input type="text" name="txt" id="txt"> ?
-    <input type="button" value="Verificar" onclick="Analisar()">
+    <input type="button" value="Verificar" id="button">
     <div id="res"></div>
     <script>
-        function Analisar() {
-            var país = document.querySelector('input#txt')
-            var res = document.querySelector('div#res')
-            var p = String(país.value)
+        const button = document.querySelector("#button")
+        button.addEventListener("click", () => {
+            const país = document.querySelector("input#txt")
+            const res = document.querySelector("div#res")
+            const p = String(país.value)
             res.innerHTML = `<p>Vivendo no(a) <strong>${p}</strong><p/>`
-            if (p.toLowerCase() != 'brasil') {
-                res.innerHTML += '<p>Estrangeiro!<p>'
+            if (p.toLowerCase() != "brasil") {
+                res.innerHTML += "<p>Estrangeiro!<p>"
             } else {
-                res.innerHTML += '<p>Brasileiro!<p>'
+                res.innerHTML += "<p>Brasileiro!<p>"
             }
-        }
+        })
+
+        document.querySelector("input[type=text]").addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+                button.click()
+            }
+        })
     </script>
 </body>
+
 </html>

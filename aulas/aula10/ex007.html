@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,31 +10,43 @@
         body {
             font: normal 18pt Arial;
         }
+
         input {
             font: normal 18pt Arial;
             width: 100px;
         }
+
         div#res {
             margin-top: 20px;
         }
     </style>
 </head>
+
 <body>
     <h1>Somando Valores</h1>
     <input type="number" name="txtn1" id="txtn1"> +
     <input type="number" name="txtn2" id="txtn2">
-    <input type="button" value="Somar" onclick="somar()">
+    <input type="button" value="Somar" id="button">
     <div id="res">Resultado</div>
     <script>
-        function somar() {
-            var tn1 = document.getElementById('txtn1')
-            var tn2 = document.querySelector('input#txtn2')
-            var res = document.getElementById('res')
-            var n1 = Number(tn1.value)
-            var n2 = Number(tn2.value)
-            var s = n1 + n2
+        const button = document.querySelector("#button")
+        button.addEventListener("click", () => {
+            const tn1 = document.getElementById("txtn1")
+            const tn2 = document.querySelector("input#txtn2")
+            const res = document.getElementById("res")
+            const n1 = Number(tn1.value)
+            const n2 = Number(tn2.value)
+            const s = n1 + n2
             res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
-        }
+        })
+
+        const numbers = document.querySelectorAll("input[type=number]")
+        numbers.forEach(number => addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+                button.click()
+            }
+        }))
     </script>
 </body>
+
 </html>
