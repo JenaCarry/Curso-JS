@@ -1,6 +1,5 @@
 document.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
-        console.log('Apertou o Enter');
         const btn = document.querySelector('#btn');
         btn.click();
     }

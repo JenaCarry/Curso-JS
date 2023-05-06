@@ -26,4 +26,5 @@ function adicionar() {
     } else {
         alert('Valor inválido ou já encontrado na lista.');
     }
+    console.log(valores);
 }
